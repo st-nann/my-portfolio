@@ -2,14 +2,27 @@
 
 > My Portfolio Project written by Vue.js
 
+## Library
+1. https://vuetifyjs.com/
+
+## font
+https://fonts.google.com/
+
 ## Build Setup
 
 ``` bash
 # install dependencies
 npm install
+or
+yarn
 
 # serve with hot reload at localhost:8080
 npm run dev
+or
+yarn dev
+
+# install vuetify
+
 
 # build for production with minification
 npm run build
