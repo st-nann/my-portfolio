@@ -45,16 +45,13 @@ npm install -g vue-cli
 ## install webpack (Vue.js)
 vue init webpack
 
-## install webpack (vuetify)
-vue init vuetifyjs/webpack
-
 ## install vuetify
 npm install vuetify --save-dev
 or
 yarn add vuetify --dev
 
-## install vue-router
-npm install vue-router
+## install stylus-loader with Webpack
+npm i stylus stylus-loader style-loader css-loader --save-dev
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
