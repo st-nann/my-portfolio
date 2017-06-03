@@ -21,9 +21,6 @@ npm run dev
 or
 yarn dev
 
-# install vuetify
-
-
 # build for production with minification
 npm run build
 
@@ -38,6 +35,26 @@ npm run e2e
 
 # run all tests
 npm test
+```
+
+## Note
+``` bash
+## install vue-cli (Vue.js)
+npm install -g vue-cli
+
+## install webpack (Vue.js)
+vue init webpack
+
+## install webpack (vuetify)
+vue init vuetifyjs/webpack
+
+## install vuetify
+npm install vuetify --save-dev
+or
+yarn add vuetify --dev
+
+## install vue-router
+npm install vue-router
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
