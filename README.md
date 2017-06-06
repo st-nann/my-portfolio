@@ -3,6 +3,9 @@
 > My Portfolio Project written by Vue.js
 
 ## Library
+1. https://vuejs.org/
+
+## CSS Library
 1. https://vuetifyjs.com/
 
 ## font
