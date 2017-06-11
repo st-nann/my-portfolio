@@ -1,15 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      meta: { nolayout: true },
+      component: function (reslove) {
+        return require(['@/components/Splash'], reslove)
+      }
     }
   ]
 })
+
+export default router
