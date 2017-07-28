@@ -8,11 +8,17 @@
 ## CSS Library
 1. https://vuetifyjs.com/
 
+## SASS
+https://github.com/webpack-contrib/sass-loader
+
+## babel-preset-env
+https://github.com/babel/babel-preset-env
+
 ## font
-https://fonts.google.com/
+1. https://fonts.google.com/
 
 ## icon
-https://icons8.com/icon/new-icons/nolan
+1. https://icons8.com/icon/new-icons/nolan
 
 ## Build Setup
 
@@ -58,6 +64,14 @@ yarn add vuetify --dev
 
 ## install stylus-loader with Webpack
 npm i stylus stylus-loader style-loader css-loader --save-dev
+
+## install SASS
+npm install sass-loader node-sass webpack --save-dev
+
+## install babel-preset-env
+npm install --save-dev babel-preset-env
+or
+yarn add babel-preset-env --dev
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
