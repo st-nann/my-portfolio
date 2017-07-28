@@ -11,6 +11,9 @@
 ## font
 https://fonts.google.com/
 
+## icon
+https://icons8.com/icon/new-icons/nolan
+
 ## Build Setup
 
 ``` bash
