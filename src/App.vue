@@ -1,18 +1,34 @@
 <template>
   <v-app id="app" style="height:100vh">
-    <main class="ma-0">
+    <template v-if="nolayout">
       <router-view></router-view>
-    </main>
+    </template>
+    <template v-else>
+      <Toolbar></Toolbar>
+      <main class="ma-0">
+        <router-view></router-view>
+      </main>
+    </template>
   </v-app>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import Toolbar from '@/components/Toolbar'
+  export default {
+    name: 'app',
+    components: {
+      'Toolbar': Toolbar
+    },
+    computed: {
+      nolayout () {
+        return typeof this.$route.meta.nolayout === 'undefined' || this.$route.meta.nolayout === true
+      }
+    }
+  }
 </script>
 
-<style>
+<style lang="scss">
+  @import './styles/font.scss';
   #app {
     /*  font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
     font-family: 'Didact Gothic', sans-serif;
@@ -20,8 +36,21 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
   }
+
+  .toolbar {
+    z-index: 9999;
+    height: 65px;
+  }
+
+  .toolbar--dense .toolbar__content, .toolbar--dense .toolbar__extension {
+    height: 65px !important;
+  }
+
+  .toolbar__title {
+    text-overflow: clip !important;
+  }
 </style>
 
 <style lang="stylus">
-  @import './stylus/main'
+  @import './styles/main'
 </style>

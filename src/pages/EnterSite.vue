@@ -1,28 +1,28 @@
 <template>
-  <div class="bg">
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12 lg10 class="px-5 pt-5">
-        <div class="bg-content">
-          <v-layout row wrap>
-            <v-flex xs12 sm12 md12>
-              <p class="white--text mb-0 content-title"> Sanyanee T. </p>
+    <div class="bg">
+        <v-layout row wrap>
+            <v-flex xs12 sm12 md12 lg10 class="px-5 pt-5">
+                <div class="bg-content">
+                    <v-layout row wrap>
+                        <v-flex xs12 sm12 md12>
+                            <p class="white--text mb-0 content-title"> Sanyanee T. </p>
+                        </v-flex>
+                        <v-flex xs12 sm12 md12 class="mb-5">
+                            <h6 class="white--text content-sub-title">
+                                <img src="../img/icon/mascot.svg"/>「サンヤニー」
+                            </h6>
+                        </v-flex>
+                            <v-btn class="white--text btn-style" to="/AboutMe" block outline>Enter Site</v-btn>
+                    </v-layout>
+                </div>
             </v-flex>
-            <v-flex xs12 sm12 md12 class="mb-5">
-              <h6 class="white--text content-sub-title">
-                <img src="../img/icon/mascot.svg"/>「サンヤニー」
-              </h6>
+        </v-layout>
+        <v-layout row wrap>
+            <v-flex sm12 md12>
+                <Footers class="footer-position hidden-md-and-up"></Footers>
             </v-flex>
-            <v-btn class="white--text btn-style" block outline>Enter Site</v-btn>
-          </v-layout>
-        </div>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex sm12 md12>
-        <Footers class="footer-position hidden-md-and-up"></Footers>
-      </v-flex>
-    </v-layout>
-  </div>
+        </v-layout>
+    </div>
 </template>
 
 <script>
