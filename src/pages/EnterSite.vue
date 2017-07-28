@@ -21,7 +21,8 @@
 </template>
 
 <style lang="scss" scoped>
-  .bg-style {
+  .bg {
+    background: url("~@/img/background/background.svg");
     background-position: center bottom;
     background-size: cover;
 
@@ -32,12 +33,7 @@
     /*!* Set up positioning *!*/
     position: fixed;
     top: 0;
-    left: 0;
-  }
-
-  .bg {
-    background: url("~@/img/background/background.svg");
-    @include .bg-style;
+    left: 0;;
   }
 
   div.bg-content {

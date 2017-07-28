@@ -10,7 +10,7 @@ let router = new Router({
       path: '/',
       meta: { nolayout: true },
       component: function (reslove) {
-        return require(['@/components/Splash'], reslove)
+        return require(['@/pages/EnterSite'], reslove)
       }
     }
   ]
