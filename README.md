@@ -4,6 +4,7 @@
 
 ## Library
 1. https://vuejs.org/
+2. https://vuex.vuejs.org/en/installation.html
 
 ## CSS Library
 1. https://vuetifyjs.com/
@@ -72,6 +73,11 @@ npm install sass-loader node-sass webpack --save-dev
 npm install --save-dev babel-preset-env
 or
 yarn add babel-preset-env --dev
+
+## install vuex
+npm install vuex --save
+or
+yarn add vuex
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
