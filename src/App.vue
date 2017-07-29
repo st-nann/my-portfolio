@@ -1,5 +1,5 @@
 <template>
-  <v-app id="app" style="height:100vh">
+  <v-app id="app" style="height:auto">
     <template v-if="nolayout">
       <router-view></router-view>
     </template>
