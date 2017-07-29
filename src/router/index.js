@@ -19,6 +19,13 @@ let router = new Router({
       component: function (reslove) {
         return require(['@/pages/MainTitle/AboutMe'], reslove)
       }
+    },
+    {
+      path: '/Contacts',
+      meta: {nolayout: false},
+      component: function (reslove) {
+        return require(['@/pages/MainTitle/Contacts'], reslove)
+      }
     }
   ]
 })
