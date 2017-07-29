@@ -33,9 +33,9 @@
     data () {
       return {
         info: [
+          { text: 'Experience', icon: require('../../../img/icon/experience.svg'), path: 'Experience' },
           { text: 'Skill', icon: require('../../../img/icon/skill.svg'), path: 'Skill' },
           { text: 'Works', icon: require('../../../img/icon/ProfileOfWork.svg'), path: 'Works' },
-          { text: 'Blog', icon: require('../../../img/icon/blog.svg'), path: 'Blog' },
           { text: 'Contacts', icon: require('../../../img/icon/contact.svg'), path: 'Contacts' }
         ]
       }
