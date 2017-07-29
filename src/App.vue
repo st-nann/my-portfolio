@@ -6,6 +6,7 @@
     <template v-else>
       <Toolbar></Toolbar>
       <main class="ma-0">
+        <Sidebar></Sidebar>
         <router-view></router-view>
       </main>
     </template>
@@ -14,10 +15,13 @@
 
 <script>
   import Toolbar from '@/components/Toolbar'
+  import Sidebar from '@/components/Sidebar'
+
   export default {
     name: 'app',
     components: {
-      'Toolbar': Toolbar
+      'Toolbar': Toolbar,
+      'Sidebar': Sidebar
     },
     computed: {
       nolayout () {

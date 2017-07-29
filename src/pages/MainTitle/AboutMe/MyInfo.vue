@@ -36,7 +36,7 @@
           { text: 'Skill', icon: require('../../../img/icon/skill.svg'), path: 'Skill' },
           { text: 'Works', icon: require('../../../img/icon/ProfileOfWork.svg'), path: 'Works' },
           { text: 'Blog', icon: require('../../../img/icon/blog.svg'), path: 'Blog' },
-          { text: 'Contact', icon: require('../../../img/icon/contact.svg'), path: 'Contact' }
+          { text: 'Contacts', icon: require('../../../img/icon/contact.svg'), path: 'Contacts' }
         ]
       }
     }
