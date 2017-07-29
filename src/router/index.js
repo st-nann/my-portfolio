@@ -21,6 +21,27 @@ let router = new Router({
       }
     },
     {
+      path: '/Works',
+      meta: {nolayout: false},
+      component: function (reslove) {
+        return require(['@/pages/MainTitle/Works'], reslove)
+      }
+    },
+    {
+      path: '/Works/Design',
+      meta: {nolayout: false},
+      component: function (reslove) {
+        return require(['@/pages/MainTitle/Works'], reslove)
+      }
+    },
+    {
+      path: '/Works/Coding',
+      meta: {nolayout: false},
+      component: function (reslove) {
+        return require(['@/pages/MainTitle/Works'], reslove)
+      }
+    },
+    {
       path: '/Contacts',
       meta: {nolayout: false},
       component: function (reslove) {
