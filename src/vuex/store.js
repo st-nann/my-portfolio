@@ -12,5 +12,3 @@ export const store = new Vuex.Store({
     layout: layout
   }
 })
-
-console.log(store)
