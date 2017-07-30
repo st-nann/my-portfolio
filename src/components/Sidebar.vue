@@ -31,7 +31,7 @@
                             <v-list-tile-title>{{ item.text }} </v-list-tile-title>
                         </v-list-tile-content>
                     </v-list-tile>
-                    <v-list-tile v-for="(child, i) in item.children" :key="i" :to="{ path: '/' + child.path }">
+                    <v-list-tile v-for="(child, i) in item.children" :key="i" :to="{ path: '/' + child.path }" @click.native.stop="toggleSidebar()">
                         <v-list-tile-action v-if="child.icon" class="ml-4">
                             <v-icon>{{ child.icon }}</v-icon>
                         </v-list-tile-action>
@@ -40,7 +40,7 @@
                         </v-list-tile-content>
                     </v-list-tile>
                 </v-list-group>
-                <v-list-tile v-else>
+                <v-list-tile v-else :to="{ path: '/' + item.path }" @click.native.stop="toggleSidebar()">
                     <v-list-tile-action>
                         <v-icon>{{ item.icon }}</v-icon>
                     </v-list-tile-action>
@@ -54,13 +54,13 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+  import { mapState, mapActions } from 'vuex'
 
   export default {
     data () {
       return {
         items: [
-          { icon: 'account_circle', text: 'About me' },
+          { icon: 'account_circle', text: 'About me', path: 'AboutMe' },
           {
             icon: 'keyboard_arrow_up',
             'icon-alt': 'keyboard_arrow_down',
@@ -80,6 +80,11 @@
       ...mapState('layout', {
         showSidebar: state => state.showSidebar
       })
+    },
+    methods: {
+      ...mapActions('layout', [
+        'toggleSidebar' // this.incrementBy(amount) maps to this.$store.dispatch('incrementBy', amount)
+      ])
     }
   }
 </script>
