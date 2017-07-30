@@ -67,9 +67,9 @@
             text: 'My Info',
             model: false,
             children: [
-              { icon: 'equalizer', text: 'Skill', path: 'Skill' },
+              { icon: 'equalizer', text: 'Experience', path: 'Experience' },
+              { icon: 'star_half', text: 'Skill', path: 'Skill' },
               { icon: 'business', text: 'Works', path: 'Works' },
-              { icon: 'web', text: 'Blog', path: 'Blog' },
               { icon: 'perm_phone_msg', text: 'Contacts', path: 'Contacts' }
             ]
           }
