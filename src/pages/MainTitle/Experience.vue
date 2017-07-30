@@ -1,7 +1,7 @@
 <template>
     <v-layout row wrap class="pa-4">
         <v-flex xs12 md10 offset-md1>
-            <v-card class="pa-4 text-xs-left mobile">
+            <v-card class="px-4 pt-4 pb-5 text-xs-left">
                 <v-layout row wrap>
                     <v-flex xs12 md12 class="mb-5">
                         <span class="display-2 ml-4 mobile-title">| </span>
