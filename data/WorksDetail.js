@@ -63,6 +63,7 @@ module.exports = {
         { image: require('../src/img/image/wroks/coding/portfolioWebsite/Portfolio-001.svg') },
         { image: require('../src/img/image/wroks/coding/portfolioWebsite/Portfolio-002.svg') },
         { image: require('../src/img/image/wroks/coding/portfolioWebsite/Portfolio-003.svg') },
+        { image: require('../src/img/image/wroks/coding/portfolioWebsite/Portfolio-004.svg') },
         { image: require('../src/img/image/wroks/coding/portfolioWebsite/Portfolio-006.svg') },
         { image: require('../src/img/image/wroks/coding/portfolioWebsite/Portfolio-007.svg') },
         { image: require('../src/img/image/wroks/coding/portfolioWebsite/Portfolio-008.svg') }

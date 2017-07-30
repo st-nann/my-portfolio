@@ -61,6 +61,10 @@
   .dialog__content {
     z-index: 99999 !important;
   }
+
+  .small {
+    font-size: 10px;
+  }
 </style>
 
 <style lang="stylus">
