@@ -21,6 +21,13 @@ let router = new Router({
       }
     },
     {
+      path: '/Experience',
+      meta: {nolayout: false},
+      component: function (reslove) {
+        return require(['@/pages/MainTitle/Experience'], reslove)
+      }
+    },
+    {
       path: '/Works',
       meta: {nolayout: false},
       component: function (reslove) {
