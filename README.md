@@ -5,6 +5,7 @@
 ## Library
 1. https://vuejs.org/
 2. https://vuex.vuejs.org/en/installation.html
+3. https://lodash.com/
 
 ## CSS Library
 1. https://vuetifyjs.com/
@@ -78,6 +79,11 @@ yarn add babel-preset-env --dev
 npm install vuex --save
 or
 yarn add vuex
+
+## install lodash.js
+npm i --save lodash
+or
+yar add lodash
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

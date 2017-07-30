@@ -53,6 +53,14 @@
   .toolbar__title {
     text-overflow: clip !important;
   }
+
+  .clickable {
+    cursor: pointer;
+  }
+
+  .dialog__content {
+    z-index: 99999 !important;
+  }
 </style>
 
 <style lang="stylus">

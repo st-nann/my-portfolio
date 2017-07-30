@@ -12,13 +12,13 @@
                         <v-card class="elevation-1">
                             <v-card-media class="image-size" :src="item.image" height="200px"></v-card-media>
                             <div class="pa-3">
-                                <div class="title grey--text text--darken-3 mb-0">{{item.title}}</div>
+                                <div class="title grey--text text--darken-3 mb-0">{{item.title}} </div>
                                 <span class="caption grey--text text--darken-1">{{item.subtitle}}</span>
-                                <div class="caption grey--text mt-2 mb-0">{{item.description}}</div>
+                                <div class="caption grey--text mt-2 mb-0">
+                                    {{item.description}}  <a v-show="image_design !== 0" class="clickable blue--text" @click.stop="openModal">view more</a>
+                                </div>
                             </div>
-                            <v-card-actions class="pt-0">
-                                <v-btn flat class="orange--text">View</v-btn>
-                            </v-card-actions>
+                            <WorksDetail :modal="modal" :closeModal="closeModal" :image_design="image_design"></WorksDetail>
                         </v-card>
                     </v-flex>
                 </v-layout>
@@ -28,17 +28,54 @@
 </template>
 
 <script>
+  import _ from 'lodash'
+  import data from '../../../../data/Works'
+  import dataDetail from '../../../../data/WorksDetail'
+  import WorksDetail from '@/pages/MainTitle/Works/modal/WorksDetail'
+
   export default {
     data () {
       return {
-        works_design: [
-          {
-            title: 'Scorpio Diary',
-            subtitle: 'スコーピオ ダイアリー',
-            description: 'Scorpio Diary is a sticker character. It made for sale on LINE application.',
-            image: require('../../../img/image/stickerLine.svg')
-          }
-        ]
+        modal: false
+      }
+    },
+    computed: {
+      works_design: function () {
+        return data.works_design
+      },
+      id: function () {
+        let id = ''
+        _.forEach(data.works_design, function (value) {
+          id = value.id
+        })
+        return id
+      },
+      image_design: function () {
+        let listImageDesign = []
+        let self = this
+        if (_.size(dataDetail.works_detail_design) === 0) {
+          listImageDesign = 0
+        } else {
+          _.forEach(dataDetail.works_detail_design, function (value) {
+            if (self.id === value.id && _.size(value.list_image) !== 0) {
+              listImageDesign = value.list_image
+            } else {
+              listImageDesign = 0
+            }
+          })
+        }
+        return listImageDesign
+      }
+    },
+    components: {
+      WorksDetail
+    },
+    methods: {
+      openModal: function () {
+        this.modal = true
+      },
+      closeModal: function () {
+        this.modal = false
       }
     }
   }
