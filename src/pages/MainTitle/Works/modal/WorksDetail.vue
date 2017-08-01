@@ -14,6 +14,7 @@
                                 <v-flex xs12 sm4 md4 v-for="(item, index) in image_design" :key="index">
                                     <v-card flat tile>
                                         <v-card-media
+                                            class="image-size"
                                             :src="item.image"
                                             height="150px"
                                         >
@@ -23,8 +24,9 @@
                                 <v-flex xs12 sm4 md4 v-for="(item, index) in image_coding" :key="index">
                                     <v-card flat tile>
                                         <v-card-media
-                                                :src="item.image"
-                                                height="150px"
+                                            class="image-size"
+                                            :src="item.image"
+                                            height="150px"
                                         >
                                         </v-card-media>
                                     </v-card>
@@ -48,3 +50,9 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  .image-size {
+    object-fit: cover;
+  }
+</style>
