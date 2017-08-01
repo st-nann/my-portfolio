@@ -4,11 +4,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import layout from './modules/layout'
+import loading from './modules/loading'
 
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   modules: {
-    layout: layout
+    layout: layout,
+    loading: loading
   }
 })
