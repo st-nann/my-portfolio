@@ -54,6 +54,13 @@ let router = new Router({
       component: function (reslove) {
         return require(['@/pages/MainTitle/Contacts'], reslove)
       }
+    },
+    {
+      path: '*',
+      meta: {nolayout: true},
+      component: function (reslove) {
+        return require(['@/pages/Error/404'], reslove)
+      }
     }
   ]
 })
