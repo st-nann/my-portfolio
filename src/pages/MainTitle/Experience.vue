@@ -67,14 +67,14 @@
         'showLoading', // this.incrementBy(amount) maps to this.$store.dispatch('incrementBy', amount)
         'noLoading' // this.incrementBy(amount) maps to this.$store.dispatch('incrementBy', amount)
       ]),
-      doLoading: function () {
+      doLoading: async function () {
+        this.showLoading()
         if (this.loading) {
           let self = this
           setTimeout(function () {
-            self.showLoading()
-          }, 3000)
+            self.noLoading()
+          }, 1000)
         }
-        this.noLoading()
       }
     }
   }

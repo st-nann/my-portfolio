@@ -3,7 +3,7 @@
         <v-toolbar-side-icon v-if="$route.path !== '/AboutMe'" @click.native.stop="toggleSidebar()"></v-toolbar-side-icon>
         <v-toolbar-title> <b> Portfolio </b> | <span class="caption ml-2"> Sanyanee T.「サンヤニー」</span></v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn icon to="/" @click.native.stop="toggleSidebar()" light>
+        <v-btn icon to="/" @click.native.stop="hiddenSider()" light>
             <img src="../img/icon/mascot.svg" width="35px"/>
         </v-btn>
     </v-toolbar>
@@ -15,7 +15,8 @@
   export default {
     methods: {
       ...mapActions('layout', [
-        'toggleSidebar' // this.incrementBy(amount) maps to this.$store.dispatch('incrementBy', amount)
+        'toggleSidebar', // this.incrementBy(amount) maps to this.$store.dispatch('incrementBy', amount)
+        'hiddenSider' // this.incrementBy(amount) maps to this.$store.dispatch('incrementBy', amount)
       ])
     }
   }

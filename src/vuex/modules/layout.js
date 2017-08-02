@@ -10,12 +10,18 @@ const getters = {}
 const mutations = {
   toggleSidebar (state) {
     state.showSidebar = !state.showSidebar
+  },
+  hiddenSider (state) {
+    state.showSidebar = false
   }
 }
 
 const actions = {
   toggleSidebar ({ commit }) {
     commit('toggleSidebar')
+  },
+  hiddenSider ({ commit }) {
+    commit('hiddenSider')
   }
 }
 
