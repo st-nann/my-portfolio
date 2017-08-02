@@ -9,10 +9,10 @@ const getters = {}
 
 const mutations = {
   showLoading (state) {
-    state.loading = false
+    state.loading = true
   },
   noLoading (state) {
-    state.loading = true
+    state.loading = false
   }
 }
 
