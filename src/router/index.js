@@ -28,6 +28,13 @@ let router = new Router({
       }
     },
     {
+      path: '/Skill',
+      meta: {nolayout: false},
+      component: function (reslove) {
+        return require(['@/pages/MainTitle/Skill'], reslove)
+      }
+    },
+    {
       path: '/Works',
       meta: {nolayout: false},
       component: function (reslove) {
