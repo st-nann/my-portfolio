@@ -8,7 +8,7 @@
                     v-bind:width="15"
                     v-bind:rotate="-90"
                     v-bind:value="value[index]"
-                    class="amber--text text--darken-1"
+                    class="light-blue--text text--lighten-3"
                 >
                     <div>
                         <img :src="item.image" width="80px"/>
