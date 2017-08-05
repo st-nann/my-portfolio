@@ -1,5 +1,5 @@
 <template>
-    <v-card class="my-2 pa-2 elevation-3 card-size" height="295px">
+    <v-card class="my-2 pa-2 elevation-3 card-size" height="360px">
         <v-layout row wrap>
             <v-flex xs12 sm3 md4>
                 <v-card-text class="headline mx-2 mobile mb-3">Languages</v-card-text>
@@ -38,7 +38,7 @@
     }
 
     .card-size {
-      height: 430px !important;
+      height: 550px !important;
     }
   }
   @media only screen and (min-width: 1024px) and (max-width: 1099px) {
