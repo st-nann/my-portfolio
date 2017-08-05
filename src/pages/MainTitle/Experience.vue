@@ -45,7 +45,7 @@
 <script>
   import { mapState, mapActions } from 'vuex'
   import loading from '@/components/loading'
-  import data from '../../../data/Experience'
+  import data from '@/../data/Experience'
 
   export default {
     components: {

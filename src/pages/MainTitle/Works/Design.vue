@@ -29,8 +29,8 @@
 
 <script>
   import _ from 'lodash'
-  import data from '../../../../data/Works'
-  import dataDetail from '../../../../data/WorksDetail'
+  import data from '@/../data/Works'
+  import dataDetail from '@/../data/WorksDetail'
   import WorksDetail from '@/pages/MainTitle/Works/modal/WorksDetail'
 
   export default {
