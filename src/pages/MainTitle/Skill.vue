@@ -19,6 +19,12 @@
                         <v-flex xs12 md6>
                             <Framework></Framework>
                         </v-flex>
+                        <v-flex xs12 md4>
+                            <Library></Library>
+                        </v-flex>
+                        <v-flex xs12 md8>
+                            <Tools></Tools>
+                        </v-flex>
                     </v-layout>
                 </v-card>
             </v-flex>
@@ -35,6 +41,8 @@
   import OperatingSystem from '@/pages/MainTitle/Skill/OS/OperatingSystem'
   import Languages from '@/pages/MainTitle/Skill/Languages/Languages'
   import Framework from '@/pages/MainTitle/Skill/Framework/Framework'
+  import Library from '@/pages/MainTitle/Skill/Library/Library'
+  import Tools from '@/pages/MainTitle/Skill/Tools/Tools'
 
   export default {
     data () {
@@ -46,7 +54,9 @@
       loading,
       OperatingSystem,
       Languages,
-      Framework
+      Framework,
+      Library,
+      Tools
     },
     computed: {
       ...mapState({
