@@ -2,7 +2,7 @@
     <div v-if="!loading">
         <v-layout row wrap class="pa-4">
             <v-flex xs12 md10 offset-md1>
-                <v-card class="px-5 py-4 text-xs-left blue-grey darken-1">
+                <v-card class="px-5 py-4 text-xs-left blue-grey darken-1 mobile">
                     <v-layout row wrap>
                         <v-flex xs12 md12 class="mb-4 white--text">
                             <span class="display-2 mobile-title">| </span>
@@ -10,8 +10,14 @@
                         </v-flex>
                     </v-layout>
                     <v-layout row wrap>
-                        <v-flex xs12>
+                        <v-flex xs12 md12>
                             <OperatingSystem></OperatingSystem>
+                        </v-flex>
+                        <v-flex xs12 md6>
+                            <Languages></Languages>
+                        </v-flex>
+                        <v-flex xs12 md6>
+                            <Framework></Framework>
                         </v-flex>
                     </v-layout>
                 </v-card>
@@ -27,6 +33,8 @@
   import { mapState, mapActions } from 'vuex'
   import loading from '@/components/loading'
   import OperatingSystem from '@/pages/MainTitle/Skill/OS/OperatingSystem'
+  import Languages from '@/pages/MainTitle/Skill/Languages/Languages'
+  import Framework from '@/pages/MainTitle/Skill/Framework/Framework'
 
   export default {
     data () {
@@ -36,7 +44,9 @@
     },
     components: {
       loading,
-      OperatingSystem
+      OperatingSystem,
+      Languages,
+      Framework
     },
     computed: {
       ...mapState({
@@ -63,3 +73,12 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  @media only screen and (max-width: 320px) {
+    .mobile {
+      padding-left: 14px !important;
+      padding-right: 14px !important;
+    }
+  }
+</style>
