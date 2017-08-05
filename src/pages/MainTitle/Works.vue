@@ -13,8 +13,10 @@
                             <v-btn :to="{ path: '/Works/Coding' }" flat info>Coding</v-btn>
                         </v-flex>
                     </v-layout>
-                    <Design v-if="$route.path === '/Works/Design' || $route.path === '/Works'"></Design>
-                    <Coding v-else-if="$route.path === '/Works/Coding'"></Coding>
+                    <transition name="fade">
+                        <Design v-if="$route.path === '/Works/Design' || $route.path === '/Works'"></Design>
+                        <Coding v-else-if="$route.path === '/Works/Coding'"></Coding>
+                    </transition>
                 </v-card>
             </v-flex>
         </v-layout>
