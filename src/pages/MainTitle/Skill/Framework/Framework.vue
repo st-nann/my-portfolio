@@ -2,31 +2,31 @@
     <v-card class="my-2 pa-2 elevation-3 card-size" height="360px">
         <v-layout row wrap>
             <v-flex xs12 sm3 md4>
-                <v-card-text class="headline mx-2 mobile mb-3">Languages</v-card-text>
+                <v-card-text class="headline mx-2 mobile mb-3">Frameworks</v-card-text>
             </v-flex>
             <v-flex xs12 sm9 md8 class="text-xs-right mobile mt-3">
-                <v-btn class="my-0 mobile" @click.native="selected = 'Programing'" flat info>Programing</v-btn>
-                <v-btn class="my-0 mobile" @click.native="selected = 'General'" flat info>General</v-btn>
+                <v-btn class="my-0 mobile" @click.native="selected = 'Frontend'" flat info>Frontend</v-btn>
+                <v-btn class="my-0 mobile" @click.native="selected = 'Backend'" flat info>Backend</v-btn>
             </v-flex>
         </v-layout>
-        <Programing v-if="selected === 'Programing'"></Programing>
-        <General v-else-if="selected === 'General'"></General>
+        <Frontend v-if="selected === 'Frontend'"></Frontend>
+        <Backend v-else-if="selected === 'Backend'"></Backend>
     </v-card>
 </template>
 
 <script>
-  import Programing from '@/pages/MainTitle/Skill/Languages/tabs/Programing'
-  import General from '@/pages/MainTitle/Skill/Languages/tabs/General'
+  import Frontend from '@/pages/MainTitle/Skill/Framework/tabs/Frontend'
+  import Backend from '@/pages/MainTitle/Skill/Framework/tabs/Backend'
 
   export default {
     data () {
       return {
-        selected: 'Programing'
+        selected: 'Frontend'
       }
     },
     components: {
-      Programing,
-      General
+      Frontend,
+      Backend
     }
   }
 </script>
@@ -38,7 +38,7 @@
     }
 
     .card-size {
-      height: 550px !important;
+      height: 310px !important;
     }
   }
   @media only screen and (min-width: 1024px) and (max-width: 1099px) {

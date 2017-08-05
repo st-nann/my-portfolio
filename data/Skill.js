@@ -41,6 +41,14 @@ module.exports = {
         {
           name: 'CSS (CSS, SASS)',
           value: 95
+        },
+        {
+          name: 'SQL',
+          value: 95
+        },
+        {
+          name: 'PHP',
+          value: 30
         }
       ],
       general: [
