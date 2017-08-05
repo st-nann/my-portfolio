@@ -2,7 +2,7 @@
     <div class="pb-3">
         <v-layout row wrap v-for="(item, index) in backend" :key="index">
             <v-flex xs12 sm4 md4>
-                <p class="subheadline pl-4 mobile-content">{{item.name}}</p>
+                <p class="subheadline pl-4 mobile">{{item.name}}</p>
             </v-flex>
             <v-flex xs9 sm6 md6>
                 <v-progress-linear
@@ -55,10 +55,10 @@
 </script>
 
 <style lang="scss" scoped>
-  @media only screen and (max-width: 414px) {
-    .mobile-content {
+  @media only screen and (max-width: 320px) {
+    .mobile {
       margin-bottom: 0px !important;
-      margin-top: 15px !important;
+    margin-top: 10px !important;
     }
   }
 </style>
