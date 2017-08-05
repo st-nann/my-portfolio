@@ -14,7 +14,7 @@
                         <img :src="item.image" width="80px"/>
                     </div>
                 </v-progress-circular>
-                <v-card-text class="subheading">{{item.name}} ({{ item.value }}%)</v-card-text>
+                <v-card-text class="subheading mb-1">{{item.name}} ({{ item.value }}%)</v-card-text>
             </v-flex>
         </v-layout>
     </v-card>
@@ -22,7 +22,7 @@
 
 <script>
   import _ from 'lodash'
-  import data from '../../../../../data/Skill'
+  import data from '@/../data/Skill'
 
   export default {
     data () {
