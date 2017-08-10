@@ -243,6 +243,10 @@ module.exports = {
           image: require('../src/img/icon/skill/tool/xampp.svg')
         },
         {
+          name: 'jMeter',
+          image: require('../src/img/icon/skill/tool/jmeter.svg')
+        },
+        {
           name: 'Microsoft Office',
           image: require('../src/img/icon/skill/tool/MicrosoftOffice.svg')
         },
