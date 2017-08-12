@@ -4,7 +4,7 @@
             <v-flex xs10 offset-xs1 sm10 offset-sm1 md10 offset-md1 lg8 offset-lg2>
                 <v-layout row wrap>
                     <v-flex xs12 sm5 md4 class="pr-0 mt-3 modify-padding">
-                        <v-card class="pa-4 text-xs-left blue-grey darken-3 white--text" height="465px">
+                        <v-card class="pa-4 text-xs-left blue-grey darken-3 white--text" height="505px">
                             <v-layout row wrap>
                                 <v-flex xs12 md12>
                                     <span class="display-2">| </span>
@@ -23,7 +23,7 @@
                         </v-card>
                     </v-flex>
                     <v-flex xs12 sm7 md8 lg8 class="pl-0 mt-3 modify-padding">
-                        <v-card class="text-xs-left pa-5" height="465px">
+                        <v-card class="text-xs-left pa-5" height="505px">
                             <v-layout row wrap class="pt-5 mobile-padding-top">
                                 <v-flex xs12 md12 class="pt-4">
                                     <div v-for="(item, index) in contacts_detail" :key="index">
@@ -32,7 +32,7 @@
                                                 <img class="image-position mr-2" :src="item.icon" width="20px"/> {{item.title}} :
                                             </v-flex>
                                             <v-flex xs12 sm7 md9>
-                                                <a v-if="item.title === 'Github' || item.title === 'LinkedIn'" class="black--text text-wrap" style="text-decoration: none;" :href="item.description">{{item.description}}</a>
+                                                <a v-if="item.title === 'Github' || item.title === 'LinkedIn' || item.title === 'Blog'" class="black--text text-wrap" style="text-decoration: none;" :href="item.description" target="_blank">{{item.description}}</a>
                                                 <span v-else class="text-wrap">{{item.description}}</span>
                                             </v-flex>
                                         </v-layout>
@@ -63,6 +63,7 @@
         contacts_detail: [
           { icon: require('../../img/icon/email.svg'), title: 'E-mail', description: 'st.sanyanee@hotmail.com' },
           { icon: require('../../img/icon/tel.svg'), title: 'Tel', description: '081-415-9698' },
+          { icon: require('../../img/icon/blog-icon.png'), title: 'Blog', description: 'https://medium.com/st-sanyanee' },
           { icon: require('../../img/icon/github.svg'), title: 'Github', description: 'https://github.com/st-nann' },
           { icon: require('../../img/icon/linkedin.svg'), title: 'LinkedIn', description: ' https://www.linkedin.com/in/sanyanee-thawinvongrak-628229144' }
         ]
