@@ -86,7 +86,11 @@ module.exports = {
       backend: [
         {
           name: 'PHP LARAVEL',
-          value: 40
+          value: 80
+        },
+        {
+          name: 'BACKPACK ADMIN',
+          value: 90
         },
         {
           name: 'KOA.JS',
