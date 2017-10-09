@@ -8,7 +8,7 @@
         <v-layout row wrap class="pa-5 mobile" v-else>
             <v-flex xs12 md12>
                 <v-layout row wrap v-for="(item, index) in works_coding" :key="index">
-                    <v-flex xs12 sm6 md4 lg2>
+                    <v-flex xs12 sm6 md4 xl2>
                         <v-card class="elevation-1">
                             <v-card-media class="image-size" :src="item.image" height="200px" @click.native.stop="actionModal()"></v-card-media>
                             <div class="pa-3">

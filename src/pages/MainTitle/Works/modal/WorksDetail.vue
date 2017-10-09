@@ -1,6 +1,6 @@
 <template>
     <v-layout row justify-center>
-        <v-dialog v-model="modal" width="700px" persistent scrollable>
+        <v-dialog v-model="modal" max-width="700px" persistent scrollable>
             <Modal
                 title="Detail"
                 description=""
