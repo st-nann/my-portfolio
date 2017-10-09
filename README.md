@@ -83,7 +83,11 @@ yarn add vuex
 ## install lodash.js
 npm i --save lodash
 or
-yar add lodash
+yarn add lodash
+
+## Upgrade dependencies
+npm update <dependency name>
+yarn upgrade <dependency name>
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
