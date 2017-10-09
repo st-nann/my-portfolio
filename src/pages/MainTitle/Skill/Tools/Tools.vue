@@ -1,5 +1,5 @@
 <template>
-    <v-card class="my-2 pa-2 elevation-3 card-size" height="280px">
+    <v-card class="my-2 pa-2 elevation-3 card-size" height="100%">
         <v-layout row wrap>
             <v-flex xs12 sm7 md7>
                 <v-card-text class="headline mx-2 mobile mb-3">Tools</v-card-text>
@@ -15,7 +15,7 @@
                     <!--hide-details-->
                 <!--&gt;</v-select>-->
                 <v-menu offset-y>
-                    <v-btn class="text-xs-right mx-0 mt-3 mobile" slot="activator" flat info>
+                    <v-btn class="text-xs-right mx-0 mt-3 mobile" slot="activator" color="info" flat>
                         {{catagory}} <v-icon info>keyboard_arrow_down</v-icon>
                     </v-btn>
                     <v-list>

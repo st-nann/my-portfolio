@@ -1,15 +1,14 @@
 <template>
-    <div class="pb-3">
+    <div>
         <v-layout row wrap v-for="(item, index) in programing" :key="index">
             <v-flex xs12 sm4 md4>
-                <p class="subheadline pl-4 mobile-content">{{item.name}}</p>
+                <p class="subheadline pl-4 mobile-content mb-1">{{item.name}}</p>
             </v-flex>
             <v-flex xs9 sm6 md6>
                 <v-progress-linear
                     v-model="value[index]"
-                    color-front="teal lighten-1"
-                    color-back="teal lighten-4"
-                    class="my-2 pl-4"
+                    color="teal lighten-1"
+                    class="my-2 ml-4"
                 ></v-progress-linear>
             </v-flex>
             <v-flex xs3 sm2 md2>
@@ -58,7 +57,6 @@
   @media only screen and (max-width: 414px) {
     .mobile-content {
       margin-bottom: 0px !important;
-      margin-top: 15px !important;
     }
   }
 </style>

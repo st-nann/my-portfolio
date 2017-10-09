@@ -1,5 +1,5 @@
 <template>
-    <v-card class="my-2 pa-2 elevation-3 card-size" height="280px">
+    <v-card class="my-2 pa-2 elevation-3 card-size" height="100%">
         <v-layout row wrap>
             <v-flex xs12>
                 <v-card-text class="headline mx-2 mobile mb-3">Library</v-card-text>
