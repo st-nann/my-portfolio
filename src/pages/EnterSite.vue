@@ -58,7 +58,7 @@
 
   div.bg-content {
     background: rgba(0, 0, 0, 0.6);
-    width: 50%;
+    width: 60%;
     height: 420px;
     padding: 30px 30px;
     margin-left: 30px;
