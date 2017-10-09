@@ -1,29 +1,25 @@
 <template>
-    <div v-if="!loading">
-        <v-layout row wrap class="pa-4">
-            <v-flex xs12 md10 offset-md1>
-                <v-card class="pa-4 text-xs-left mobile">
-                    <v-layout row wrap>
-                        <v-flex xs12 md6>
-                            <span class="display-2 ml-4 mobile-title">| </span>
-                            <span class="display-1">Works</span>
-                        </v-flex>
-                        <v-flex xs12 md6 class="text-xs-right mt-2">
-                            <v-btn :to="{ path: '/Works/Design' }" flat info>Design</v-btn>
-                            <v-btn :to="{ path: '/Works/Coding' }" flat info>Coding</v-btn>
-                        </v-flex>
-                    </v-layout>
-                    <transition name="fade">
-                        <Design v-if="$route.path === '/Works/Design' || $route.path === '/Works'"></Design>
-                        <Coding v-else-if="$route.path === '/Works/Coding'"></Coding>
-                    </transition>
-                </v-card>
-            </v-flex>
-        </v-layout>
-    </div>
-    <div v-else>
-        <loading></loading>
-    </div>
+    <v-layout row wrap class="pa-4" v-if="!loading">
+        <v-flex xs12 md10 offset-md1>
+            <v-card class="pa-4 text-xs-left mobile">
+                <v-layout row wrap>
+                    <v-flex xs12 md6>
+                        <span class="display-2 ml-4 mobile-title">| </span>
+                        <span class="display-1">Works</span>
+                    </v-flex>
+                    <v-flex xs12 md6 class="text-xs-right mt-2">
+                        <v-btn :to="{ path: '/Works/Design' }" color="info" flat>Design</v-btn>
+                        <v-btn :to="{ path: '/Works/Coding' }" color="info" flat>Coding</v-btn>
+                    </v-flex>
+                </v-layout>
+                <transition name="fade">
+                    <Design v-if="$route.path === '/Works/Design' || $route.path === '/Works'"></Design>
+                    <Coding v-else-if="$route.path === '/Works/Coding'"></Coding>
+                </transition>
+            </v-card>
+        </v-flex>
+    </v-layout>
+    <loading v-else></loading>
 </template>
 
 <script>
