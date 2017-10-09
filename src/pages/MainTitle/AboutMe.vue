@@ -1,19 +1,19 @@
 <template>
-    <div v-if="!loading">
-        <v-carousel icon="photo" cycle dark>
-            <v-carousel-item v-for="(item, index) in items" :key="index" v-bind:src="item.src"></v-carousel-item>
-        </v-carousel>
-        <WhoAmI></WhoAmI>
-        <MyInfo></MyInfo>
-        <v-layout row wrap>
-          <v-flex sm12 md12>
-            <Footers></Footers>
-          </v-flex>
-        </v-layout>
-    </div>
-    <div v-else>
-        <loading></loading>
-    </div>
+    <v-layout row wrap v-if="!loading">
+        <v-flex xs12>
+            <v-carousel icon="photo" cycle dark>
+                <v-carousel-item v-for="(item, index) in items" :key="index" v-bind:src="item.src"></v-carousel-item>
+            </v-carousel>
+            <WhoAmI></WhoAmI>
+            <MyInfo></MyInfo>
+            <v-layout row wrap>
+              <v-flex sm12 md12>
+                <Footers></Footers>
+              </v-flex>
+            </v-layout>
+        </v-flex>
+    </v-layout>
+    <loading v-else></loading>
 </template>
 
 <script>
