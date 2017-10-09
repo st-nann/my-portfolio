@@ -5,8 +5,8 @@
                 <v-card-text class="headline mx-2 mobile mb-3">Frameworks</v-card-text>
             </v-flex>
             <v-flex xs12 sm9 md8 class="text-xs-right mobile mt-3">
-                <v-btn class="my-0 mobile" @click.native="selected = 'Frontend'" flat info>Frontend</v-btn>
-                <v-btn class="my-0 mobile" @click.native="selected = 'Backend'" flat info>Backend</v-btn>
+                <v-btn class="my-0 mobile" @click.native="selected = 'Frontend'" color="info" flat>Frontend</v-btn>
+                <v-btn class="my-0 mobile" @click.native="selected = 'Backend'" color="info" flat>Backend</v-btn>
             </v-flex>
         </v-layout>
         <Frontend v-if="selected === 'Frontend'"></Frontend>
