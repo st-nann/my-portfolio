@@ -1,7 +1,7 @@
 <template>
     <v-navigation-drawer
             v-if="$route.path !== '/AboutMe'"
-            class="pb-0 pt-3"
+            class="pb-0 pt-5 mt-4"
             persistent
             absolute
             temporary
