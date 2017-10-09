@@ -1,15 +1,14 @@
 <template>
-    <div class="pb-3">
+    <div>
         <v-layout row wrap v-for="(item, index) in backend" :key="index">
             <v-flex xs12 sm4 md4>
-                <p class="subheadline pl-4 mobile">{{item.name}}</p>
+                <p class="subheadline pl-4 mobile mb-1">{{item.name}}</p>
             </v-flex>
             <v-flex xs9 sm6 md6>
                 <v-progress-linear
                     v-model="value[index]"
-                    color-front="teal lighten-1"
-                    color-back="teal lighten-4"
-                    class="my-2 pl-4"
+                    color="teal lighten-1"
+                    class="my-2 ml-4"
                 ></v-progress-linear>
             </v-flex>
             <v-flex xs3 sm2 md2>
