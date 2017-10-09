@@ -11,7 +11,7 @@
         </v-card-text>
         <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn class="blue--text darken-1" flat @click.native="closeModal">{{button}}</v-btn>
+            <v-btn class="blue--text darken-1" flat @click.native.stop="closeModal">{{button}}</v-btn>
         </v-card-actions>
     </v-card>
 </template>

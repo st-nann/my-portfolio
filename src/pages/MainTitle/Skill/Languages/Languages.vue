@@ -5,8 +5,8 @@
                 <v-card-text class="headline mx-2 mobile mb-3">Languages</v-card-text>
             </v-flex>
             <v-flex xs12 sm9 md8 class="text-xs-right mobile mt-3">
-                <v-btn class="my-0 mobile" @click.native="selected = 'Programing'" flat info>Programing</v-btn>
-                <v-btn class="my-0 mobile" @click.native="selected = 'General'" flat info>General</v-btn>
+                <v-btn class="my-0 mobile" @click.native="selected = 'Programing'" color="info" flat>Programing</v-btn>
+                <v-btn class="my-0 mobile" @click.native="selected = 'General'" color="info" flat>General</v-btn>
             </v-flex>
         </v-layout>
         <Programing v-if="selected === 'Programing'"></Programing>
