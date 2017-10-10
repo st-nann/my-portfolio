@@ -10,7 +10,9 @@
                        <v-card-text class="text-position display-1 grey--text text--darken-2 pb-0"><b>Oops !</b></v-card-text>
                        <v-card-text class="title grey--text text--darken-2 pt-3 pb-0">You have some problems.</v-card-text>
                        <v-card-text class="body-2 grey--text text--darken-1 pt-1">The page you are looking for was moved, removed, renamed or might never existed.</v-card-text>
-                       <v-btn class="ml-3 light-blue--text text--darken-3" :to="{ path: '/' }" outline>Go back</v-btn>
+                       <a href="/" style="text-decoration:none;">
+                           <v-btn class="ml-3 light-blue--text text--darken-3" outline>Go back</v-btn>
+                       </a>
                    </v-flex>
                </v-layout>
             </v-card>
