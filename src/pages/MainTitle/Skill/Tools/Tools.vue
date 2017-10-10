@@ -18,7 +18,7 @@
                     <v-btn class="text-xs-right mx-0 mt-3 mobile" slot="activator" color="info" flat>
                         {{catagory}} <v-icon info>keyboard_arrow_down</v-icon>
                     </v-btn>
-                    <v-list>
+                    <v-list style="cursor: pointer;">
                         <v-list-tile v-for="(item, index) in menu" :key="index" @click.native="selectCatagory(item.name, item.value)">
                             <v-list-tile-title >{{ item.name }}</v-list-tile-title>
                         </v-list-tile>
