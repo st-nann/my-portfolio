@@ -32,7 +32,6 @@
 </script>
 
 <style lang="scss">
-  @import './styles/font.scss';
   #app {
     /*  font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
     font-family: 'Didact Gothic', sans-serif;
@@ -75,5 +74,5 @@
 </style>
 
 <style lang="stylus">
-  @import './styles/main'
+  @import './stylus/main';
 </style>
