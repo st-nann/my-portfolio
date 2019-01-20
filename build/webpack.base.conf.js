@@ -61,11 +61,12 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: /\.styl$/,
-        loader: ['style', 'css', 'stylus']
       }
+      // },
+      // {
+      //   test: /\.styl$/,
+      //   loader: ['style', 'css', 'stylus']
+      // }
     ]
   }
 }
