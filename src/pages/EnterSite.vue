@@ -7,7 +7,9 @@
               <v-flex xs8 offset-xs2>
                 <div class="display-3 black--text font-weight-regular">sanyanee</div>
                 <div>サンヤーネィ・タビンボンラック</div>
-                <v-divider class="my-3 line"></v-divider>
+                <v-divider class="ml-1 my-3 line"></v-divider>
+              </v-flex>
+              <v-flex xs8 offset-xs2>
               </v-flex>
             </v-layout>
           </v-flex>
