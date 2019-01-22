@@ -33,11 +33,8 @@
 
 <style lang="scss">
   #app {
-    /*  font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
-    font-family: 'Didact Gothic', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
   }
 
   .toolbar {
@@ -70,6 +67,9 @@
   }
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0
+  }
+  img.logo {
+    width: 70px !important;
   }
 </style>
 
