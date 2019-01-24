@@ -1,25 +1,36 @@
 <template>
     <transition name="fade">
         <v-layout row wrap>
-          <v-flex xs8>
+          <v-flex xs7 sm5 lg6>
             <img class="ma-2 logo" src="~@/img/icon/logo.png"/>
             <v-layout row wrap align-center>
-              <v-flex xs8 offset-xs2>
-                <div class="display-3 black--text font-weight-regular">sanyanee</div>
-                <div>サンヤーネィ・タビンボンラック</div>
+              <v-flex xs8 offset-xs2 style="z-index: 1;">
+                <div
+                  class="black--text font-weight-regular"
+                  :class="$vuetify.breakpoint.xs ? 'display-2' : 'display-4'"
+                >sanyanee</div>
+                <div class="mt-1" :class="{'caption': $vuetify.breakpoint.xs}">
+                  サンヤーネィ・タビンボンラック
+                </div>
                 <v-divider class="ml-1 my-3 line"></v-divider>
-              </v-flex>
-              <v-flex xs8 offset-xs2>
-              </v-flex>
-            </v-layout>
-          </v-flex>
-          <v-flex xs4 class="bg-color">
-            <v-layout row wrap align-center fill-height>
-              <v-flex xs12>
-                <img class="bg-img" src="~@/img/image/home/home.jpg"/>
+                <v-flex xs12 style="z-index: 1;" class="hidden-lg-and-up">
+                  <img class="bg-img-mobile" src="~@/img/image/home/home.jpg"/>
+                </v-flex>
               </v-flex>
             </v-layout>
           </v-flex>
+          <v-flex xs2 sm1 lg1>
+            <v-layout
+              row wrap fill-height
+              :align-center="!$vuetify.breakpoint.xs"
+              :align-end="$vuetify.breakpoint.xs"
+            >
+              <v-flex xs12 style="z-index: 1;" class="hidden-md-and-down">
+                <img class="bg-img-desktop" src="~@/img/image/home/home.jpg"/>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+          <v-flex xs3 sm6 lg5 class="bg-color"></v-flex>
         </v-layout>
     </transition>
 </template>
@@ -40,16 +51,36 @@
   }
 
   .bg-img {
-    width: 90%;
-    height: auto;
     border-top: 7px solid #ffffff;
     border-right: 7px solid #ffffff;
     border-bottom: 7px solid #ffffff;
     @extend .bg-style;
   }
 
+  .bg-img-desktop {
+    width: 400%;
+    @extend .bg-img;
+  }
+
+  .bg-img-mobile {
+    @extend .bg-img;
+  }
+
+  @media only screen and (max-width: 599px) {
+    .bg-img-mobile {
+      width: 200%;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .bg-img-mobile {
+      width: 300%;
+    }
+  }
+
   .bg-color {
     background: #e0b265;
+    z-index: 0;
     @extend .bg-style;
   }
 
