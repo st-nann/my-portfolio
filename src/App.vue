@@ -75,4 +75,8 @@
 
 <style lang="stylus">
   @import './stylus/main';
+
+  .font-size-10 {
+    font-size: 10px;
+  }
 </style>
