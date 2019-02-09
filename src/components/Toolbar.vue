@@ -1,25 +1,27 @@
 <template>
     <v-toolbar class="white" fixed light flat>
         <v-toolbar-side-icon
-          v-if="$route.path !== '/AboutMe'"
           class="black--text"
           @click.native.stop="toggleSidebar()"
         ></v-toolbar-side-icon>
+        <v-spacer class="hidden-sm-and-up"></v-spacer>
         <v-toolbar-title class="ml-0">
           <img class="mt-2 logo" src="~@/img/icon/logo-minimal.png"/>
         </v-toolbar-title>
-        <v-spacer></v-spacer>
-         <v-toolbar-items v-for="(item, index) in menu" :key="index">
-            <v-btn
-              class="menu font-weight-bold"
-              append :to="{path: item.route}"
-              color="black"
-              :ripple="false"
-              flat
-            >
-              <span :class="{'text-decoration': $route.path === item.route}">{{item.name}}</span>
-            </v-btn>
-          </v-toolbar-items>
+        <v-divider class="ml-3 mr-3 hidden-xs-only" inset vertical></v-divider>
+        <span class="headline font-weight-bold hidden-xs-only">Sanyanee</span>
+        <v-spacer class="hidden-xs-only"></v-spacer>
+        <v-toolbar-items v-for="(item, index) in menu" :key="index">
+          <v-btn
+            class="menu font-weight-bold hidden-xs-only"
+            append :to="{path: item.route}"
+            color="black"
+            :ripple="false"
+            flat
+          >
+            <span :class="{'text-decoration': $route.path === item.route}">{{item.name}}</span>
+          </v-btn>
+        </v-toolbar-items>
     </v-toolbar>
 </template>
 
