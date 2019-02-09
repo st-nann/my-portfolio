@@ -33,43 +33,29 @@
 
 <style lang="scss">
   #app {
-    /*  font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
-    font-family: 'Didact Gothic', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
   }
-
-  .toolbar {
-    z-index: 9999;
-    height: 65px;
-  }
-
-  .toolbar--dense .toolbar__content, .toolbar--dense .toolbar__extension {
-    height: 65px !important;
-  }
-
-  .toolbar__title {
-    text-overflow: clip !important;
-  }
-
   .clickable {
     cursor: pointer;
   }
-
   .dialog__content {
     z-index: 99999 !important;
   }
-
-  .small {
-    font-size: 10px;
-  }
-
   .fade-enter-active, .fade-leave-active {
     transition: opacity 1s
   }
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0
+  }
+  img.logo {
+    width: 50px !important;
+  }
+  .font-size-10 {
+    font-size: 10px;
+  }
+  .text-decoration {
+    border-bottom: 1.5px solid black;;
   }
 </style>
 

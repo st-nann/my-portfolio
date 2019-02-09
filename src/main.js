@@ -12,12 +12,12 @@ import 'babel-polyfill'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '#022169',
-    secondary: '#163275',
-    lightgrey: '#e3e7ef',
-    lightblue: '#6477A3',
-    greybody: '#f2f4f7',
-    pink: '#d81e72',
+    offwhite: '#f4efe9',
+    lightgrey: '#dfe0e0',
+    yellow: '#f1e7b7',
+    cinnamon: '#e0b265',
+    lightblue: '#d6eff8',
+    darkblue: '#3f4559',
     info: colors.blue.base,
     warning: colors.amber.base,
     error: colors.red.base,

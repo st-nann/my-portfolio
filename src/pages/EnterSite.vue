@@ -1,29 +1,61 @@
 <template>
     <transition name="fade">
-        <div class="bg">
-            <v-layout row wrap>
-                <v-flex xs12 sm12 md12 lg10 class="px-5 pt-5">
-                    <div class="bg-content">
-                        <v-layout row wrap>
-                            <v-flex xs12 sm12 md12>
-                                <p class="white--text mb-0 content-title"> Sanyanee T. </p>
-                            </v-flex>
-                            <v-flex xs12 sm12 md12 class="mb-5">
-                                <h6 class="white--text content-sub-title">
-                                    <img src="../img/icon/mascot.svg"/>「サンヤニー」
-                                </h6>
-                            </v-flex>
-                            <v-btn class="white--text btn-style" to="/AboutMe" block outline>Enter Site</v-btn>
-                        </v-layout>
-                    </div>
-                </v-flex>
-            </v-layout>
-            <v-layout row wrap>
-                <v-flex sm12 md12>
-                    <Footers class="footer-position hidden-md-and-up"></Footers>
-                </v-flex>
-            </v-layout>
-        </div>
+      <v-layout row wrap>
+        <v-flex xs7 sm5 lg6>
+          <img class="ma-2 logo" src="~@/img/icon/logo-minimal.png"/>
+          <v-layout
+            row wrap
+            :align-center="!$vuetify.breakpoint.xs"
+            :align-start="$vuetify.breakpoint.xs"
+          >
+            <v-flex xs8 offset-xs2 style="z-index: 1;">
+              <div
+                class="black--text font-weight-regular"
+                :class="{
+                  'display-2 mt-1': $vuetify.breakpoint.xs,
+                  'display-4': $vuetify.breakpoint.smAndUp,
+                  'mt-5 pt-5 display-4': $vuetify.breakpoint.lgAndUp
+                }"
+              >sanyanee</div>
+              <div class="mt-3 pl-1" :class="{'caption': $vuetify.breakpoint.xs}">
+                サンヤーネィ・タビンボンラック
+              </div>
+              <v-divider class="ml-1 my-3 line"></v-divider>
+              <div class="hidden-md-and-down">
+                <v-btn class="elevation-3 px-3 ml-1" append :to="{ path: '/AboutMe'}" color="darkblue" round dark>
+                  KNOW MORE <v-icon class="pl-1" size="13">far fa-arrow-alt-circle-right</v-icon>
+                </v-btn>
+              </div>
+              <img class="bg-img-mobile hidden-lg-and-up" src="~@/img/image/home/home.jpg" style="z-index: 1;"/>
+              <v-layout row wrap class="pl-1 font-size-10 hidden-lg-and-up">
+                <v-flex xs12>Sanyanee Thawinvongrak</v-flex>
+                <v-flex xs12>DEVELOPER</v-flex>
+              </v-layout>
+              <div class="hidden-lg-and-up mt-2 mb-3">
+                <v-btn class="elevation-3 px-3 ml-0" append :to="{ path: '/AboutMe'}" color="darkblue" round dark small>
+                  KNOW MORE <v-icon class="pl-1" size="13">far fa-arrow-alt-circle-right</v-icon>
+                </v-btn>
+              </div>
+              <v-layout row wrap class="pt-5 mt-5 text-xs-right hidden-md-and-down">
+                <v-flex xs12 class="pt-5 mt-5">Sanyanee Thawinvongrak</v-flex>
+                <v-flex xs12>DEVELOPER</v-flex>
+              </v-layout>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+        <v-flex xs2 sm1 lg1>
+          <v-layout
+            row wrap fill-height
+            :align-center="!$vuetify.breakpoint.xs"
+            :align-end="$vuetify.breakpoint.xs"
+          >
+            <v-flex xs12 style="z-index: 1;" class="hidden-md-and-down">
+              <img class="bg-img-desktop" src="~@/img/image/home/home.jpg"/>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+        <v-flex xs3 sm6 lg5 class="bg-color"></v-flex>
+      </v-layout>
     </transition>
 </template>
 
@@ -39,216 +71,46 @@
 
 <style lang="scss" scoped>
   .bg-style {
-      /*!* Set up proportionate scaling *!*/
-      min-width: 100%;
-      min-height: 100%;
-
-      /*!* Set up positioning *!*/
-      position: fixed;
-      top: 0;
-      left: 0;
+    right: 0;
   }
 
-  .bg {
-    background: url("~@/img/background/background.svg");
-    background-position: center bottom;
-    background-size: cover;
+  .bg-img {
+    border-top: 7px solid #ffffff;
+    border-right: 7px solid #ffffff;
+    border-bottom: 7px solid #ffffff;
     @extend .bg-style;
   }
 
-  div.bg-content {
-    background: rgba(0, 0, 0, 0.6);
-    width: 60%;
-    height: 420px;
-    padding: 30px 30px;
-    margin-left: 30px;
-    margin-top: 50px;
+  .bg-img-desktop {
+    width: 400%;
+    @extend .bg-img;
   }
 
-  .content-title {
-    font-size: 75px;
-    text-align: right;
+  .bg-img-mobile {
+    @extend .bg-img;
   }
 
-  .content-sub-title {
-    font-size: 20px;
-    text-align: right;
-  }
-
-  img {
-    vertical-align: sub;
-    width: 40px;
-  }
-
-  .btn-style {
-    height: 45px;
-    margin-top: 85px;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    .bg {
-      background: url("~@/img/background/background-mobile.svg");
-      background-position: center bottom;
-      background-size: cover;
-
-    }
-
-    div.bg-content {
-      width: 100%;
-      height: 1270px;
-      padding: 48px 48px;
-      margin-left: 0px;
-      margin-top: 0px;
-    }
-
-    .content-title {
-      font-size: 110px;
-      margin-top: 560px;
-      text-align: left;
-    }
-
-    .content-sub-title {
-      font-size: 40px;
-      text-align: left;
-    }
-
-    img {
-      width: 70px;
-    }
-
-    .btn-style {
-      height: 100px;
-      font-size: 30px;
-      margin-top: 100px;
+  @media only screen and (max-width: 599px) {
+    .bg-img-mobile {
+      width: 200%;
     }
   }
 
-  @media only screen and (max-width: 768px) {
-    div.bg-content {
-      width: 100%;
-      height: 890px;
-      padding: 48px 48px;
-      margin-left: 0px;
-      margin-top: 0px;
-    }
-
-    .content-title {
-      font-size: 80px;
-      margin-top: 330px;
-    }
-
-    .content-sub-title {
-      font-size: 30px;
-    }
-
-    img {
-      width: 60px;
-    }
-
-    .btn-style {
-      height: 80px;
-      font-size: 25px;
-      margin-top: 140px;
-    }
-
-    .footer-position {
-      margin-top: 50px;
+  @media only screen and (min-width: 600px) {
+    .bg-img-mobile {
+      width: 300%;
     }
   }
 
-  @media only screen and (max-width: 414px) {
-    div.bg-content {
-      width: 113%;
-      height: 635px;
-      padding: 48px 25px;
-      margin-left: -20px;
-      margin-top: -20px;
-    }
-
-    .content-title {
-      font-size: 50px;
-      margin-top: -35px;
-    }
-
-    .content-sub-title {
-      font-size: 20px;
-      text-align: right;
-    }
-
-    img {
-      width: 40px;
-    }
-
-    .btn-style {
-      height: 55px;
-      font-size: 16px;
-      margin-top: 330px;
-    }
-
-    .footer-position {
-      margin-top: 37px;
-    }
+  .bg-color {
+    background: #e0b265;
+    z-index: 0;
+    @extend .bg-style;
   }
 
-  @media only screen and (max-width: 375px) {
-    div.bg-content {
-      width: 122%;
-      height: 585px;
-      padding: 48px 20px;
-      margin-left: -30px;
-      margin-top: -30px;
-    }
-
-    .content-title {
-      font-size: 45px;
-      margin-top: -40px;
-    }
-
-    .content-sub-title {
-      font-size: 18px;
-    }
-
-    img {
-      width: 38px;
-    }
-
-    .btn-style {
-      height: 50px;
-      font-size: 15px;
-      margin-top: 290px;
-    }
-
-    .footer-position {
-      margin-top: 30px;
-    }
-  }
-
-  @media only screen and (max-width: 320px) {
-    div.bg-content {
-      width: 130%;
-      height: 490px;
-      padding: 30px 20px;
-      margin-left: -35px;
-      margin-top: -35px;
-    }
-
-    .content-title {
-      font-size: 40px;
-      margin-top: -20px;
-    }
-
-    .content-sub-title {
-      font-size: 13px;
-    }
-
-    img {
-      width: 30px;
-    }
-
-    .btn-style {
-      height: 45px;
-      font-size: 15px;
-      margin-top: 230px;
-    }
+  .line {
+    border-width: thin 0px 2px 0;
+    border-color: #5f5e5e;
+    width: 60px;
   }
 </style>
