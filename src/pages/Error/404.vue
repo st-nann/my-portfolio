@@ -4,7 +4,7 @@
             <v-card class="text-xs-left pa-5 card-position">
                <v-layout row wrap class="mt-5 outside-layout">
                    <v-flex xs12 order-xs2 md6 order-md1 class="mt-5 text-xs-center">
-                       <img class="mt-5 pt-4 image-size" src="../../img/icon/Error404.svg" width="500px"/>
+                       <img class="mt-5 pt-4 image-size" src="~@/img/icon/Error404.svg" width="500px"/>
                    </v-flex>
                    <v-flex xs12 order-xs1 md6 order-md2>
                        <v-card-text class="text-position display-1 grey--text text--darken-2 pb-0"><b>Oops !</b></v-card-text>

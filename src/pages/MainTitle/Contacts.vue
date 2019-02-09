@@ -12,7 +12,7 @@
                         </v-layout>
                         <v-layout row wrap class="text-xs-center">
                             <v-flex xs12 md12>
-                                <img class="image-style mt-5 mb-4" src="../../img/image/profile.svg"/>
+                                <img class="image-style mt-5 mb-4" src="~@/img/image/profile.svg"/>
                             </v-flex>
                             <v-flex xs12 md12>
                                 <p class="title">Sanyanee Thawinvongrak</p>
@@ -38,7 +38,7 @@
                                 </div>
                             </v-flex>
                             <v-flex xs12 md12 class="text-xs-right pt-5 signature">
-                                <img src="../../img/image/signature.svg" width="200px"/>
+                                <img src="~@/img/image/signature.svg" width="200px"/>
                             </v-flex>
                         </v-layout>
                     </v-card>
@@ -57,11 +57,11 @@
     data () {
       return {
         contacts_detail: [
-          { icon: require('../../img/icon/email.svg'), title: 'E-mail', description: 'st.sanyanee@hotmail.com' },
-          { icon: require('../../img/icon/tel.svg'), title: 'Tel', description: '081-415-9698' },
-          { icon: require('../../img/icon/blog-icon.png'), title: 'Blog', description: 'https://medium.com/st-sanyanee' },
-          { icon: require('../../img/icon/github.svg'), title: 'Github', description: 'https://github.com/st-nann' },
-          { icon: require('../../img/icon/linkedin.svg'), title: 'LinkedIn', description: ' https://www.linkedin.com/in/sanyanee-thawinvongrak-628229144' }
+          { icon: require('@/img/icon/email.svg'), title: 'E-mail', description: 'st.sanyanee@hotmail.com' },
+          { icon: require('@/img/icon/tel.svg'), title: 'Tel', description: '081-415-9698' },
+          { icon: require('@/img/icon/blog-icon.png'), title: 'Blog', description: 'https://medium.com/st-sanyanee' },
+          { icon: require('@/img/icon/github.svg'), title: 'Github', description: 'https://github.com/st-nann' },
+          { icon: require('@/img/icon/linkedin.svg'), title: 'LinkedIn', description: ' https://www.linkedin.com/in/sanyanee-thawinvongrak-628229144' }
         ]
       }
     },

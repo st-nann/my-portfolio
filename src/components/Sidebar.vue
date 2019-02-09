@@ -1,78 +1,54 @@
 <template>
     <v-navigation-drawer
-            class="pb-0 pt-5 mt-4"
-            persistent
-            absolute
-            temporary
-            height="100%"
-            clipped
-            enable-resize-watcher
-            v-model="showSidebar"
+        v-model="showSidebar"
+        height="100%"
+        persistent
+        absolute
+        temporary
+        clipped
+        enable-resize-watcher
     >
-        <v-list dense>
-            <template v-for="(item, i) in items">
-                <v-layout
-                    row
-                    v-if="item.heading"
-                    align-center
-                    :key="i"
-                >
-                    <v-flex xs6>
-                        <v-subheader v-if="item.heading">{{ item.heading }}</v-subheader>
-                    </v-flex>
-                </v-layout>
-                <v-list-group v-else-if="item.children" v-model="item.model" no-action>
-                    <v-list-tile slot="item">
-                        <v-list-tile-action>
-                            <v-icon>{{ item.model ? item.icon : item['icon-alt'] }}</v-icon>
-                        </v-list-tile-action>
-                        <v-list-tile-content>
-                            <v-list-tile-title>{{ item.text }} </v-list-tile-title>
-                        </v-list-tile-content>
-                    </v-list-tile>
-                    <v-list-tile v-for="(child, i) in item.children" :key="i" :to="{ path: '/' + child.path }" @click.native.stop="toggleSidebar()">
-                        <v-list-tile-action v-if="child.icon" class="ml-4">
-                            <v-icon>{{ child.icon }}</v-icon>
-                        </v-list-tile-action>
-                        <v-list-tile-content>
-                            <v-list-tile-title>{{ child.text }}</v-list-tile-title>
-                        </v-list-tile-content>
-                    </v-list-tile>
-                </v-list-group>
-                <v-list-tile v-else :to="{ path: '/' + item.path }" @click.native.stop="toggleSidebar()">
-                    <v-list-tile-action>
-                        <v-icon>{{ item.icon }}</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                        <v-list-tile-title>{{ item.text }}</v-list-tile-title>
-                    </v-list-tile-content>
-                </v-list-tile>
-            </template>
-        </v-list>
+      
+      <v-layout row wrap class="text-xs-center mx-3">
+        <v-flex xs12 class="pt-4">
+          <v-avatar
+            class="elevation-1"
+            color="offwhite"
+            size="130"
+            >
+            <img src="~@/img/icon/logo-minimal-notext.png" alt="avatar">
+          </v-avatar>
+        </v-flex>
+        <v-flex xs12 class="pt-3 font-weight-bold subheading">
+          Sanyanee Thawinvongrak
+        </v-flex>
+        <v-flex xs12 class="font-weigh-regular caption">
+          ネン・サンヤーネィ・タビンボンラック
+        </v-flex>
+        <v-flex xs12 class="pa-3">
+          <v-divider></v-divider>
+        </v-flex>
+      </v-layout>
+      <v-layout row wrap justify-space-around class="px-4">
+        <v-flex xs5 v-for="(item, index) in menu" :key="index" class="text-xs-center">
+          <v-card class="pa-3 mb-3" append :to="{path: item.route}">
+            <v-icon color="grey darken-3" size="25">home</v-icon> 
+            <div class="grey--text text--darken-3 text-xs-center">{{item.name}}</div>
+          </v-card>
+        </v-flex>
+      </v-layout>
+      <v-list dense></v-list>
     </v-navigation-drawer>
 </template>
 
 <script>
   import { mapState, mapActions } from 'vuex'
+  import data from '@/../data/Base'
 
   export default {
     data () {
       return {
-        items: [
-          { icon: 'account_circle', text: 'About me', path: 'AboutMe' },
-          {
-            icon: 'keyboard_arrow_up',
-            'icon-alt': 'keyboard_arrow_down',
-            text: 'My Info',
-            model: false,
-            children: [
-              { icon: 'equalizer', text: 'Experience', path: 'Experience' },
-              { icon: 'star_half', text: 'Skill', path: 'Skill' },
-              { icon: 'business', text: 'Works', path: 'Works' },
-              { icon: 'perm_phone_msg', text: 'Contacts', path: 'Contacts' }
-            ]
-          }
-        ]
+        menu: data.menu
       }
     },
     computed: {
@@ -87,9 +63,3 @@
     }
   }
 </script>
-
-<style>
-  #navigation-1 a {
-    text-decoration: none;
-  }
-</style>

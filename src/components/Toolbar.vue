@@ -6,7 +6,9 @@
         ></v-toolbar-side-icon>
         <v-spacer class="hidden-sm-and-up"></v-spacer>
         <v-toolbar-title class="ml-0">
-          <img class="mt-2 logo" src="~@/img/icon/logo-minimal.png"/>
+          <a href="/">
+            <img class="mt-2 logo" src="~@/img/icon/logo-minimal.png"/>
+          </a>
         </v-toolbar-title>
         <v-divider class="ml-3 mr-3 hidden-xs-only" inset vertical></v-divider>
         <span class="headline font-weight-bold hidden-xs-only">Sanyanee</span>
@@ -27,17 +29,12 @@
 
 <script>
   import { mapActions } from 'vuex'
+  import data from '@/../data/Base'
 
   export default {
     data () {
       return {
-        menu: [
-          { name: 'About me', value: 'about_me', route: '/AboutMe' },
-          { name: 'Experience', value: 'experience', route: '/Experience' },
-          { name: 'Skill', value: 'skill', route: '/Skill' },
-          { name: 'Portfolio', value: 'portfolio', route: '/Works' },
-          { name: 'Contacts', value: 'contacts', route: '/Contacts' }
-        ]
+        menu: data.menu
       }
     },
     methods: {
