@@ -2,7 +2,7 @@
     <transition name="fade">
       <v-layout row wrap>
         <v-flex xs7 sm5 lg6>
-          <img class="ma-2 logo" src="~@/img/icon/logo.png"/>
+          <img class="ma-2 logo" src="~@/img/icon/logo-minimal.png"/>
           <v-layout
             row wrap
             :align-center="!$vuetify.breakpoint.xs"
@@ -22,7 +22,7 @@
               </div>
               <v-divider class="ml-1 my-3 line"></v-divider>
               <div class="hidden-md-and-down">
-                <v-btn class="elevation-3 px-3 ml-1" color="amber darken-2" round dark>
+                <v-btn class="elevation-3 px-3 ml-1" append :to="{ path: '/AboutMe'}" color="darkblue" round dark>
                   KNOW MORE <v-icon class="pl-1" size="13">far fa-arrow-alt-circle-right</v-icon>
                 </v-btn>
               </div>
@@ -32,7 +32,7 @@
                 <v-flex xs12>DEVELOPER</v-flex>
               </v-layout>
               <div class="hidden-lg-and-up mt-2 mb-3">
-                <v-btn class="elevation-3 px-3 ml-0" color="amber darken-2" round dark small>
+                <v-btn class="elevation-3 px-3 ml-0" append :to="{ path: '/AboutMe'}" color="darkblue" round dark small>
                   KNOW MORE <v-icon class="pl-1" size="13">far fa-arrow-alt-circle-right</v-icon>
                 </v-btn>
               </div>

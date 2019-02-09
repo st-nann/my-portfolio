@@ -36,32 +36,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
-  .toolbar {
-    z-index: 9999;
-    height: 65px;
-  }
-
-  .toolbar--dense .toolbar__content, .toolbar--dense .toolbar__extension {
-    height: 65px !important;
-  }
-
-  .toolbar__title {
-    text-overflow: clip !important;
-  }
-
   .clickable {
     cursor: pointer;
   }
-
   .dialog__content {
     z-index: 99999 !important;
   }
-
-  .small {
-    font-size: 10px;
-  }
-
   .fade-enter-active, .fade-leave-active {
     transition: opacity 1s
   }
@@ -69,14 +49,16 @@
     opacity: 0
   }
   img.logo {
-    width: 70px !important;
+    width: 50px !important;
+  }
+  .font-size-10 {
+    font-size: 10px;
+  }
+  .text-decoration {
+    border-bottom: 1.5px solid black;;
   }
 </style>
 
 <style lang="stylus">
   @import './stylus/main';
-
-  .font-size-10 {
-    font-size: 10px;
-  }
 </style>
