@@ -70,7 +70,7 @@
       <v-layout row wrap class="text-xs-center mx-3">
         <v-flex xs12>
           <span class="font-size-10 grey--text">
-            <v-icon size="10" color="grey">mdi-alpha-c-circle-outline</v-icon> Portfolio website v2.0.0
+            <v-icon size="10" color="grey">mdi-alpha-c-circle-outline</v-icon> Portfolio website v2.0.0 (2019)
           </span>
         </v-flex>
       </v-layout>
