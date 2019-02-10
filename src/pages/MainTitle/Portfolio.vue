@@ -5,16 +5,16 @@
                 <v-layout row wrap>
                     <v-flex xs12 md6>
                         <span class="display-2 ml-4 mobile-title">| </span>
-                        <span class="display-1">Works</span>
+                        <span class="display-1">Portfolio</span>
                     </v-flex>
                     <v-flex xs12 md6 class="text-xs-right mt-2">
-                        <v-btn :to="{ path: '/Works/Design' }" color="info" flat>Design</v-btn>
-                        <v-btn :to="{ path: '/Works/Coding' }" color="info" flat>Coding</v-btn>
+                        <v-btn :to="{ path: '/Portfolio/Design' }" color="info" flat>Design</v-btn>
+                        <v-btn :to="{ path: '/Portfolio/Coding' }" color="info" flat>Coding</v-btn>
                     </v-flex>
                 </v-layout>
                 <transition name="fade">
-                    <Design v-if="$route.path === '/Works/Design' || $route.path === '/Works'"></Design>
-                    <Coding v-else-if="$route.path === '/Works/Coding'"></Coding>
+                    <Design v-if="$route.path === '/Portfolio/Design' || $route.path === '/Portfolio'"></Design>
+                    <Coding v-else-if="$route.path === '/Portfolio/Coding'"></Coding>
                 </transition>
             </v-card>
         </v-flex>
@@ -25,8 +25,8 @@
 <script>
   import { mapState, mapActions } from 'vuex'
   import loading from '@/components/loading'
-  import Design from '@/pages/MainTitle/Works/Design'
-  import Coding from '@/pages/MainTitle/Works/Coding'
+  import Design from '@/pages/MainTitle/Portfolio/Design'
+  import Coding from '@/pages/MainTitle/Portfolio/Coding'
 
   export default {
     components: {

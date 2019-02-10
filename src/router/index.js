@@ -35,24 +35,24 @@ let router = new Router({
       }
     },
     {
-      path: '/Works',
+      path: '/Portfolio',
       meta: {nolayout: false},
       component: function (reslove) {
-        return require(['@/pages/MainTitle/Works'], reslove)
+        return require(['@/pages/MainTitle/Portfolio'], reslove)
       }
     },
     {
-      path: '/Works/Design',
+      path: '/Portfolio/Design',
       meta: {nolayout: false},
       component: function (reslove) {
-        return require(['@/pages/MainTitle/Works'], reslove)
+        return require(['@/pages/MainTitle/Portfolio'], reslove)
       }
     },
     {
-      path: '/Works/Coding',
+      path: '/Portfolio/Coding',
       meta: {nolayout: false},
       component: function (reslove) {
-        return require(['@/pages/MainTitle/Works'], reslove)
+        return require(['@/pages/MainTitle/Portfolio'], reslove)
       }
     },
     {

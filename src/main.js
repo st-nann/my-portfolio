@@ -9,8 +9,10 @@ import VueClipboards from 'vue-clipboard2'
 import colors from 'vuetify/es5/util/colors'
 import './stylus/main.styl'
 import 'babel-polyfill'
+import '@mdi/font/css/materialdesignicons.css'
 
 Vue.use(Vuetify, {
+  iconfont: 'mdi', // 'md' || 'mdi' || 'fa' || 'fa4'
   theme: {
     offwhite: '#f4efe9',
     lightgrey: '#dfe0e0',

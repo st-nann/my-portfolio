@@ -2,7 +2,7 @@
     <transition name="fade">
       <v-layout row wrap>
         <v-flex xs7 sm5 lg6>
-          <img class="ma-2 logo" src="~@/img/icon/logo-minimal.png"/>
+          <img class="ma-2 logo" src="~@/img/image/base/logo-minimal.png"/>
           <v-layout
             row wrap
             :align-center="!$vuetify.breakpoint.xs"

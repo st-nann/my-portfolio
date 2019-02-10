@@ -2,7 +2,7 @@
  * Created by St.Nann on 30-Jul-17.
  */
 module.exports = {
-  works_design: [
+  portfolio_design: [
     {
       id: 'design-001',
       name: 'stickerLine',
@@ -12,7 +12,7 @@ module.exports = {
       image: require('../src/img/image/stickerLine.svg')
     }
   ],
-  works_coding: [
+  portfolio_coding: [
     {
       id: 'coding-001',
       name: 'portfolioWeb',

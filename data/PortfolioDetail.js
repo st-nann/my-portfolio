@@ -2,7 +2,7 @@
  * Created by St.Nann on 30-Jul-17.
  */
 module.exports = {
-  works_detail_design: [
+  portfolio_detail_design: [
     {
       id: 'design-001',
       name: 'stickerLine',
@@ -55,7 +55,7 @@ module.exports = {
       ]
     }
   ],
-  works_detail_coding: [
+  portfolio_detail_coding: [
     {
       id: 'coding-001',
       name: 'portfolioWeb',
