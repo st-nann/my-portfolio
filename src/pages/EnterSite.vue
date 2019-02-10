@@ -23,7 +23,7 @@
               <v-divider class="ml-1 my-3 line"></v-divider>
               <div class="hidden-md-and-down">
                 <v-btn class="elevation-3 px-3 ml-1" append :to="{ path: '/AboutMe'}" color="darkblue" round dark>
-                  KNOW MORE <v-icon class="pl-1" size="13">far fa-arrow-alt-circle-right</v-icon>
+                  KNOW MORE <v-icon class="pl-2" size="12">far fa-arrow-alt-circle-right</v-icon>
                 </v-btn>
               </div>
               <img class="bg-img-mobile hidden-lg-and-up" src="~@/img/image/home/home.jpg" style="z-index: 1;"/>
@@ -33,7 +33,7 @@
               </v-layout>
               <div class="hidden-lg-and-up mt-2 mb-3">
                 <v-btn class="elevation-3 px-3 ml-0" append :to="{ path: '/AboutMe'}" color="darkblue" round dark small>
-                  KNOW MORE <v-icon class="pl-1" size="13">far fa-arrow-alt-circle-right</v-icon>
+                  KNOW MORE <v-icon class="pl-2" size="12">far fa-arrow-alt-circle-right</v-icon>
                 </v-btn>
               </div>
               <v-layout row wrap class="pt-5 mt-5 text-xs-right hidden-md-and-down">

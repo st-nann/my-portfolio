@@ -22,8 +22,18 @@
         <v-flex xs12 class="pt-3 font-weight-bold subheading">
           Sanyanee Thawinvongrak
         </v-flex>
-        <v-flex xs12 class="font-weigh-regular caption">
+        <v-flex xs12 class="font-weigh-medium grey--text text--darken-3 caption">
           ネン・サンヤーネィ・タビンボンラック
+        </v-flex>
+        <v-flex xs12 class="font-size-10 font-weigh-thin grey--text text--darken-1 caption">
+          st.sanyanee@hotmail.com
+        </v-flex>
+        <v-flex xs12 class="pt-2">
+          <v-btn
+            color="cinnamon"
+            :to="{path: '/'}"
+            append round outline small
+          >Home</v-btn>
         </v-flex>
         <v-flex xs12 class="pa-3">
           <v-divider></v-divider>
@@ -33,7 +43,7 @@
         <v-flex xs5 v-for="(item, index) in menu" :key="index" class="text-xs-center">
           <v-card class="pa-3 mb-3" append :to="{path: item.route}">
             <v-icon color="grey darken-3" size="25">home</v-icon> 
-            <div class="grey--text text--darken-3 text-xs-center">{{item.name}}</div>
+            <div class="grey--text text--darken-3 text-xs-center caption">{{item.name}}</div>
           </v-card>
         </v-flex>
       </v-layout>
